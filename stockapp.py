@@ -5,7 +5,7 @@ import yfinance as yf
 import plotly.graph_objects as go
 import plotly_express as px
 import streamlit as st
-import datetime
+from datetime import datetime
 
 header_row = st.container()
 ownership_row = st.container()
