@@ -25,7 +25,7 @@ with header_row:
     company_name_sel = company_name_col.selectbox('Select Company below', options=records,
                                                   format_func=lambda records: f'{records["display_name"]}')
     # Date picker
-    from_date = from_date_col.date_input('Select Report Start date',value = '2019-01-01')
+    from_date = from_date_col.date_input('Select Report Start date',value = pd.to_datetime('2019-01-01'))
 
 with ownership_row:
     st.write(''' ##### * Brief Company Description * ''')
