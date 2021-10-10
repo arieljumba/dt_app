@@ -59,5 +59,22 @@ with model_training:
     disp_col.write(mean_squared_error(y,prediction))
     disp_col.subheader('R2 Score is: ')
     disp_col.write(r2_score(y,prediction))
+    
+    hide_streamlit_style = """
+             <style>
+             #MainMenu {visibility: hidden;}
+             footer {visibility: hidden;}
+             footer:after {
+             content:'made by arieljumba (arieljumba5@gmail.com)';
+             visibility: visible;
+             display: block;
+             position: relative;
+             #background-color: red;
+             padding: 5px;
+             top: 2px;
+             }
+             </style>
+             """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
