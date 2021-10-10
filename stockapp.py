@@ -5,6 +5,7 @@ import yfinance as yf
 import plotly.graph_objects as go
 import plotly_express as px
 import streamlit as st
+import datetime
 
 header_row = st.container()
 ownership_row = st.container()
@@ -24,7 +25,7 @@ with header_row:
     company_name_sel = company_name_col.selectbox('Select Company below', options=records,
                                                   format_func=lambda records: f'{records["display_name"]}')
     # Date picker
-    from_date = from_date_col.date_input('Select Report Start date',value = (datetime(2019, 1, 1))
+    from_date = from_date_col.date_input('Select Report Start date',value = (datetime.datetime(2019, 1, 1))
 
 with ownership_row:
     st.write(''' ##### * Brief Company Description * ''')
