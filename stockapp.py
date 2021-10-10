@@ -12,7 +12,7 @@ financial_row = st.container()
 stocks_row = st.container()
 
 with header_row:
-    st.title('Company Performance')
+    st.title('Company Performance: created by arieljumba')
 
     company_name_col, from_date_col = st.columns(2)
     # company selection
@@ -73,3 +73,20 @@ with stocks_row:
                       ticklabelmode='period')
     fig3.update_layout(margin={'l': 0, 'b': 0, 't': 3, 'r': 10})
     st.write(fig3)
+    
+    hide_streamlit_style = """
+             <style>
+             #MainMenu {visibility: hidden;}
+             footer {visibility: hidden;}
+             footer:after {
+             content:'made by arieljumba (arieljumba5@gmail.com)';
+             visibility: visible;
+             display: block;
+             position: relative;
+             #background-color: red;
+             padding: 5px;
+             top: 2px;
+             }
+             </style>
+             """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
